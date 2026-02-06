@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}My App{% endblock %}</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+</head>
+<body>
+    <nav style="background:#6C63FF;color:#fff;padding:15px;text-align:center;">
+        <a href="{% url 'homepage' %}" style="color:#fff;margin:0 15px;">Home</a>
+        <a href="{% url 'todolist' %}" style="color:#fff;margin:0 15px;">To-Do List</a>
+        <a href="{% url 'about' %}" style="color:#fff;margin:0 15px;">About</a>
+        <a href="{% url 'contact' %}" style="color:#fff;margin:0 15px;">Contact</a>
+    </nav>
+    <div class="content">
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>
